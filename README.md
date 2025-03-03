@@ -59,3 +59,17 @@ flutter doctor -v
 ```sh
 flutter upgrade
 ```
+
+
+## Upgrading packages
+
+### To update to the latest compatible versions of all the dependencies listed in the pubspec.yaml file
+
+```sh
+flutter pub upgrade
+```
+
+### To update to the latest possible version of all the dependencies listed in the pubspec.yaml file
+```sh
+flutter pub upgrade --major-versions
+```
