@@ -102,3 +102,13 @@ flutter run -d windows
 flutter run -d macos
 flutter run -d linux
 ```
+
+## Criando projetos
+
+```sh
+flutter create project_sample_1
+```
+
+```sh
+flutter create -e project_sample_2
+```
