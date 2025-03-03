@@ -38,6 +38,12 @@ where flutter dart
 ```sh
 flutter doctor
 ```
+```sh
+# https://developer.android.com/tools/variables?hl=pt-br#set
+# https://developer.android.com/studio/intro/update?hl=pt-br#sdk-manager
+
+sdkmanager --install "cmdline-tools;latest"
+```
 
 ```sh
 flutter doctor --android-licenses
