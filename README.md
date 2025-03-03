@@ -17,16 +17,20 @@ Expand-Archive `
 # Define ou atualiza a variável FLUTTER_HOME no escopo do usuário
 [Environment]::SetEnvironmentVariable("FLUTTER_HOME", "$env:USERPROFILE\dev\flutter", "User")
 
-# Obtém o valor atual da variável Path do usuário
+# Recupera o PATH atual do usuário
 $oldPath = [Environment]::GetEnvironmentVariable("Path", "User")
 
-# Cria o novo path do Flutter (diretório bin)
-$newPathEntry = "$env:FLUTTER_HOME\bin"
+# Define o novo caminho do Flutter (diretório bin)
+$flutterBin = "$env:USERPROFILE\dev\flutter\bin"
 
-# Se o diretório não estiver presente, adiciona-o no início do Path
-if ($oldPath -notlike "*$newPathEntry*") {
-    [Environment]::SetEnvironmentVariable("Path", "$newPathEntry;$oldPath", "User")
-}
+# Remove todas as entradas do PATH que contenham "\dev\flutter\bin" (evitando duplicatas ou caminhos antigos)
+$filteredPaths = $oldPath -split ';' | ForEach-Object { $_.Trim() } | Where-Object { $_ -and ($_ -notlike "*\dev\flutter\bin*") }
+
+# Monta o novo PATH, colocando o diretório Flutter no início
+$newPath = "$flutterBin;" + ($filteredPaths -join ';')
+
+# Atualiza a variável de ambiente Path no escopo do usuário
+[Environment]::SetEnvironmentVariable("Path", $newPath, "User")
 ```
 
 # Setup
