@@ -39,9 +39,7 @@ $newPath = "$flutterBin;" + ($filteredPaths -join ';')
 where flutter dart
 ```
 
-```sh
-flutter doctor
-```
+
 ```sh
 # https://developer.android.com/tools/variables?hl=pt-br#set
 # https://developer.android.com/studio/intro/update?hl=pt-br#sdk-manager
@@ -52,4 +50,9 @@ cd $env:USERPROFILE\AppData\Local\Android\Sdk\cmdline-tools\latest\bin
 
 ```sh
 flutter doctor --android-licenses
+```
+
+```sh
+flutter doctor
+flutter doctor -v
 ```
