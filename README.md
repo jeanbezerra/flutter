@@ -56,3 +56,6 @@ flutter doctor --android-licenses
 flutter doctor
 flutter doctor -v
 ```
+```sh
+flutter upgrade
+```
