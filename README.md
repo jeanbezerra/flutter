@@ -73,3 +73,26 @@ flutter pub upgrade
 ```sh
 flutter pub upgrade --major-versions
 ```
+
+## Configurando novas plataformas
+
+```sh
+flutter config --no-enable-ios
+```
+
+```sh
+flutter config --no-enable-windows-desktop
+flutter config --no-enable-linux-desktop
+flutter config --no-enable-macos-desktop
+flutter config --no-enable-web
+flutter config --no-enable-android
+flutter config --no-enable-ios
+```
+
+## Executando em outras plataformas
+
+```sh
+flutter run -d windows
+flutter run -d macos
+flutter run -d linux
+```
