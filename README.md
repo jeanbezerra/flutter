@@ -76,8 +76,14 @@ flutter pub upgrade --major-versions
 
 ## Configurando novas plataformas
 
+
 ```sh
-flutter config --no-enable-ios
+flutter config --enable-windows-desktop
+flutter config --enable-linux-desktop
+flutter config --enable-macos-desktop
+flutter config --enable-web
+flutter config --enable-android
+flutter config --enable-ios
 ```
 
 ```sh
